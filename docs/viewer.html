@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fishy Gaussian Splat Viewer</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #container { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <!-- PlayCanvas Splat Viewer from CDN (or use a local copy if you prefer) -->
+  <script src="https://cdn.jsdelivr.net/gh/playcanvas/splat-transform@main/dist/splat-viewer.js"></script>
+  <script>
+    // Wait for the viewer library to load
+    window.addEventListener('DOMContentLoaded', function() {
+      // Create the viewer
+      const viewer = new window.SplatViewer({
+        container: document.getElementById('container'),
+        // Path to your PLY file in docs/
+        url: 'fishy.ply',
+        // Optional: background color, camera, etc.
+      });
+    });
+  </script>
+</body>
+</html>
